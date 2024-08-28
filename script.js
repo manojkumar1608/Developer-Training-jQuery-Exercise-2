@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $("#wrapper").css({
         border: "2px solid #FF1A00",
+        'margin-bottom':'100px'
     });
   
     // Creating new div with id 'references'
@@ -56,6 +57,7 @@ $(document).ready(function () {
         "border-bottom": "2px solid #FF1A00",
         "border-top": "2px solid #FF1A00",
         "overflow": "hidden",
+        
     });
   
      const $footer = $('#mypage_footer footer');
