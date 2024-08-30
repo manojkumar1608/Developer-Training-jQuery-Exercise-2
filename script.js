@@ -1,13 +1,13 @@
 $(document).ready(function () {
-    $("#wrapper").css({
-        border: "2px solid #FF1A00",
-        'margin-bottom':'100px'
-    });
-  
-    // Creating new div with id 'references'
-    $("<div>", {
-        id: "references",
-        html: `
+  $("#wrapper").css({
+    border: "2px solid #FF1A00",
+    "margin-bottom": "5px",
+  });
+
+  // Creating new div with id 'references'
+  $("<div>", {
+    id: "references",
+    html: `
         <main class="center-content"> 
             <div class="hidden">
                 <h4>References</h4> 
@@ -21,74 +21,70 @@ $(document).ready(function () {
             </ul>
         </main>
         `,
-    }).appendTo("#mypage_centerContent");
-  
-    $("<aside>", {
-        class: "leftnav",
-        html: `<h4>References</h4>`,
-    }).appendTo("#mypage_leftnav");
-  
-    $("#mypage_header").css({
-        "background-color": "#FFFF88",
-        color: "#CC0000",
-        "border-bottom": "2px solid #FF1A00",
-        "height": "10px",
-        "overflow": "hidden"
-    });
-  
-    $("#center_section").css({
-        "background-color": "#FFFF88",
-        color: "#CC0000",
-        "padding-bottom": "30px",
-    });
-  
-    $("#mypage_centerContent main").css({
-        "border-bottom": "2px solid #FF1A00",
-    });
-  
-    $("#mypage_leftnav aside").css({
-        color: "#CC0000",
-        "border-right": "2px solid #FF1A00",
-    });
-  
-    $("#mypage_footer").css({
-        "background-color": "#FFFF88",
-         color: "#CC0000",
-        "border-bottom": "2px solid #FF1A00",
-        "border-top": "2px solid #FF1A00",
-        "overflow": "hidden",
-        
-    });
-  
-     const $footer = $('#mypage_footer footer');
-     $footer.css({
-         'display': 'none',
-     });
+  }).appendTo("#mypage_centerContent");
 
-  
-     // Mouse enter: slide down
-     $('#mypage_footer').on('mouseenter', function() {
-         $footer.stop(true, true).slideDown(10000, function() {
-             alert('Animation complete');
-         });
-     });
-  
-     // Mouse leave: slide up
-     $('#mypage_footer').on('mouseleave', function() {
-         $footer.stop(true).slideUp(500); 
-     });
+  $("<aside>", {
+    class: "leftnav",
+    html: `<h4>References</h4>`,
+  }).appendTo("#mypage_leftnav");
 
-  
-    // Header setup
-    $('#mypage_header').hover(
-        function() {
-            // Mouse enters
-            $(this).stop(true).animate({ height: '100px' }, 600);
-        },
-        function() {
-            // Mouse leaves
-            $(this).stop(true).animate({ height: '10px' }, 600); 
-        }
-    );
+  $("#mypage_header").css({
+    "background-color": "#FFFF88",
+    color: "#CC0000",
+    "border-bottom": "2px solid #FF1A00",
+    height: "10px",
+    overflow: "hidden",
   });
-  
+
+  $("#center_section").css({
+    "background-color": "#FFFF88",
+    color: "#CC0000",
+    "padding-bottom": "30px",
+  });
+
+  $("#mypage_centerContent main").css({
+    "border-bottom": "2px solid #FF1A00",
+  });
+
+  $("#mypage_leftnav aside").css({
+    color: "#CC0000",
+    "border-right": "2px solid #FF1A00",
+  });
+
+  $("#mypage_footer").css({
+    "background-color": "#FFFF88",
+    color: "#CC0000",
+    "border-bottom": "2px solid #FF1A00",
+    "border-top": "2px solid #FF1A00",
+    overflow: "hidden",
+  });
+
+  const $footer = $("#mypage_footer footer");
+  $footer.css({
+    display: "none",
+  });
+
+  // Mouse enter: slide down
+  $("#mypage_footer").on("mouseenter", function () {
+    $footer.stop(true, true).slideDown(10000, function () {
+      alert("Animation complete");
+    });
+  });
+
+  // Mouse leave: slide up
+  $("#mypage_footer").on("mouseleave", function () {
+    $footer.stop(true).slideUp(500);
+  });
+
+  // Header setup
+  $("#mypage_header").hover(
+    function () {
+      // Mouse enters
+      $(this).stop(true).animate({ height: "100px" }, 600);
+    },
+    function () {
+      // Mouse leaves
+      $(this).stop(true).animate({ height: "10px" }, 600);
+    }
+  );
+});
