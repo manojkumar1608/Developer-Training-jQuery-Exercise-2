@@ -28,23 +28,24 @@ $(document).ready(function () {
     html: `<h4>References</h4>`,
   }).appendTo("#mypage_leftnav");
 
-  $("#mypage_header").css({
+  const commonStyles = {
     "background-color": "#FFFF88",
     color: "#CC0000",
     "border-bottom": "2px solid #FF1A00",
-    height: "10px",
     overflow: "hidden",
+  };
+
+  $("#mypage_header").css({
+    ...commonStyles,
+    height: "10px",
   });
 
   $("#center_section").css({
-    "background-color": "#FFFF88",
-    color: "#CC0000",
+    ...commonStyles,
     "padding-bottom": "30px",
   });
 
-  $("#mypage_centerContent main").css({
-    "border-bottom": "2px solid #FF1A00",
-  });
+  $("#mypage_centerContent main").css("border-bottom", "2px solid #FF1A00");
 
   $("#mypage_leftnav aside").css({
     color: "#CC0000",
@@ -52,11 +53,8 @@ $(document).ready(function () {
   });
 
   $("#mypage_footer").css({
-    "background-color": "#FFFF88",
-    color: "#CC0000",
-    "border-bottom": "2px solid #FF1A00",
+    ...commonStyles,
     "border-top": "2px solid #FF1A00",
-    overflow: "hidden",
   });
 
   const $footer = $("#mypage_footer footer");
